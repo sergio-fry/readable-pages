@@ -1,0 +1,3 @@
+project=readable_pages
+test=minitest
+template=erb

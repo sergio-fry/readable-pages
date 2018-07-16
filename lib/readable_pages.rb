@@ -1,0 +1,2 @@
+module ReadablePages
+end
