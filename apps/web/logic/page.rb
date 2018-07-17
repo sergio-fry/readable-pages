@@ -7,6 +7,12 @@ module Web
 
       def title
       end
+
+      def content
+      end
+
+      def source
+      end
     end
   end
 end
