@@ -1,5 +1,7 @@
+require 'open-uri'
+
 class InternetGateway
   def read(url)
-    'bar'
+    open(url).read
   end
 end
