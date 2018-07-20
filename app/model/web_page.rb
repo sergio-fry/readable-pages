@@ -1,7 +1,10 @@
 class WebPage
-  def initialize(url); end
+  def initialize(url, internet_gateway = InternetGateway.new)
+    @url = url
+    @internet_gateway = internet_gateway
+  end
 
   def content
-    'bar'
+    @internet_gateway.read @url
   end
 end
