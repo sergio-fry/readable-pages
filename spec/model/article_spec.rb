@@ -1,17 +1,13 @@
 require 'spec_helper'
 
 RSpec.describe Article do
-  let(:content) do
-    <<-HTML
-    <h1>Some Title</h1>
-    <div>Content here</div>
-    HTML
-  end
+  let(:web_page) { WebPage.new 'https://en.wikipedia.org/wiki/Russia' }
+  let(:article) { Article.new web_page }
 
-  let(:article) { Article.new content }
-
-  describe 'title' do
-    subject { article.title }
-    it { should eq 'Some Title' }
+  it 'guess title and pictures' do
+    VCR.use_cassette :russia_wiki do
+      expect(article.title).to eq 'Russia - Wikipedia'
+      expect(article.images.size).to be > 0
+    end
   end
 end

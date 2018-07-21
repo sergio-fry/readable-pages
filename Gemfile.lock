@@ -8,8 +8,13 @@ GEM
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.3)
+    fastimage (2.1.3)
+    guess_html_encoding (0.0.11)
     hashdiff (0.3.7)
     jaro_winkler (1.5.1)
+    mini_portile2 (2.3.0)
+    nokogiri (1.8.4)
+      mini_portile2 (~> 2.3.0)
     parallel (1.12.1)
     parser (2.5.1.2)
       ast (~> 2.4.0)
@@ -39,6 +44,9 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.9.0)
+    ruby-readability (0.7.0)
+      guess_html_encoding (>= 0.0.4)
+      nokogiri (>= 1.6.0)
     safe_yaml (1.0.4)
     unicode-display_width (1.4.0)
     vcr (4.0.0)
@@ -52,9 +60,11 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  fastimage
   require_all
   rspec
   rubocop
+  ruby-readability
   vcr
   webmock
 
