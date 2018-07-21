@@ -4,9 +4,10 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
+gem 'fastimage'
 gem 'require_all'
 gem 'ruby-readability'
-gem 'fastimage'
+gem 'sinatra'
 
 group :development do
   gem 'rubocop'
@@ -17,6 +18,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'rack-test'
   gem 'rspec'
   gem 'vcr'
   gem 'webmock'

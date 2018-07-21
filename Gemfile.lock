@@ -13,6 +13,7 @@ GEM
     hashdiff (0.3.7)
     jaro_winkler (1.5.1)
     mini_portile2 (2.3.0)
+    mustermann (1.0.2)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
     parallel (1.12.1)
@@ -20,6 +21,11 @@ GEM
       ast (~> 2.4.0)
     powerpack (0.1.2)
     public_suffix (3.0.2)
+    rack (2.0.5)
+    rack-protection (2.0.3)
+      rack
+    rack-test (1.0.0)
+      rack (>= 1.0, < 3)
     rainbow (3.0.0)
     require_all (2.0.0)
     rspec (3.7.0)
@@ -48,6 +54,12 @@ GEM
       guess_html_encoding (>= 0.0.4)
       nokogiri (>= 1.6.0)
     safe_yaml (1.0.4)
+    sinatra (2.0.3)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.3)
+      tilt (~> 2.0)
+    tilt (2.0.8)
     unicode-display_width (1.4.0)
     vcr (4.0.0)
     webmock (3.4.2)
@@ -61,10 +73,12 @@ PLATFORMS
 DEPENDENCIES
   byebug
   fastimage
+  rack-test
   require_all
   rspec
   rubocop
   ruby-readability
+  sinatra
   vcr
   webmock
 

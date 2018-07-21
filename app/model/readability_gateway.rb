@@ -1,5 +1,5 @@
 class ReadabilityGateway
-  def parse(html)
+  def parse(_html)
     OpenStruct.new title: 'Some Title'
   end
 end
