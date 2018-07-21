@@ -1,6 +1,5 @@
+require_relative '../environment'
 require 'byebug'
-require 'require_all'
-require_all 'app'
 require 'rack/test'
 ENV['RACK_ENV'] = 'test'
 
