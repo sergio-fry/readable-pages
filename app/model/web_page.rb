@@ -7,4 +7,8 @@ class WebPage
   def content
     @internet_gateway.read @url
   end
+
+  def article
+    Article.new self
+  end
 end
