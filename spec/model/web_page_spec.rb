@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.describe WebPage do
   class InternetGatewayStub
-    def read(url)
+    def read(_url)
       'bar'
     end
   end
